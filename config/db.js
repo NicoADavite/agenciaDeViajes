@@ -1,14 +1,10 @@
 import Sequelize from 'sequelize';
 import dotenv from "dotenv/config";
 
-const dbName = process.env.DB_NAME;
-const dbUser = process.env.DB_USER;
-const dbPass = process.env.DB_PASS;
-const dbHost = process.env.DB_HOST;
+const { DB_NAME, DB_USER, DB_PASS, DB_HOST } = process.env;
 
-
-const db = new Sequelize( dbName, dbUser, dbPass, {
-    host: dbHost,
+const db = new Sequelize( DB_NAME, DB_USER, DB_PASS, {
+    host: DB_HOST,
     port: "3306",
     dialect: "mysql",
     define: {
