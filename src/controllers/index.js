@@ -1,6 +1,6 @@
 // import db from "../config/db.js";
-import { Viaje } from "../models/Viaje.js";
-import { Testimonial } from "../models/Testimonial.js";
+import { Viaje } from "../database/models/Viaje.js";
+import { Testimonial } from "../database/models/Testimonial.js";
 
 const indexController = {
     async inicio(req, res){

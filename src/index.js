@@ -3,7 +3,7 @@ import express from "express";
 import path from "path";
 import {fileURLToPath} from 'url';
 
-import db from "./config/db.js";
+import db from "./database/config/db.js";
 import indexRouter from "./routes/index.js";
 
 
@@ -18,10 +18,11 @@ try {
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const publicPath = path.join(__dirname, "public");
+const publicPath = path.join(__dirname, "../public");
 
 
 app.set('view engine', 'pug');
+app.set('views', path.join(__dirname, 'views'))
 
 app.use((req, res, next) => {
   const year = new Date();
