@@ -1,0 +1,35 @@
+extends ./layout/index
+
+block slider
+    .slider
+        h1 Río de Janeiro
+        em aventura
+
+block contenido
+    main.container.mt-5
+        h2.text-center.mb-5 Sobre Nosotros
+        .row.mb-5
+            .col-md-6   
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, aliquam quia illo voluptatum tempore repudiandae hic ducimus reiciendis in sapiente quis, perferendis voluptatibus facere iure cupiditate nesciunt laboriosam omnis adipisci? repudiandae. 
+                p Lorem ipsum dolor sit amet consectetur adipisicing elFacilis, aliquam quia illo voluptatum tempore repudiandae ducimus reiciendis in sapiente quis, perferendis voluptatifacere iure cupiditate nesciunt laboriosam omnis adipisci? repudiandae reiciendis in sapiente qui voluptatum tempore facere.
+            .col-md-6  
+                img(src="/img/inicio_nosotros.jpg", class="img-fluid", alt="imagen-inicio_nosotros")
+
+        include ./layout/bloque_viajes
+
+    .descuento
+        .container
+            .row
+                .col-md-6
+                    .contenido
+                        h3 5% de descuento
+                        p.titulo Viaje a Canadá 
+                        p.fecha 20 de Julio de 2022 - 27 de Julio de 2022
+                        p.precio USD 2.500
+
+    .container
+        h2.mt-5.text-center Testimoniales
+
+        include ./layout/bloque_testimoniales
+
+
